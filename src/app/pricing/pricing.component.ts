@@ -12,4 +12,8 @@ export class PricingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  notAvailbleYet(): void {
+    alert('Du kannst aktuell noch keine Abbonements abschließen, da sich das Projekt noch in der Beta befindet.');
+  }
+
 }

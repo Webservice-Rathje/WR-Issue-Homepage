@@ -1,9 +1,58 @@
+<div class="modal fade" id="Home-Beta-Modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Für die Beta registrieren</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label>Name:<input class="form-control" type="text" id="home-beta-name-input"></label>
+        <label>Email:<input class="form-control" type="email" id="home-beta-email-input"></label>
+        <label>Organisation:<input class="form-control" type="text" id="home-beta-orga-input"></label>
+        <hr>
+        <label>Nachricht:<textarea class="form-control" id="home-beta-msg-input"></textarea></label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">abbrechen</button>
+        <button type="button" class="btn btn-primary" (click)="registerForBeta()">Anfrage senden</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="Home-Testversion-Modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Für die Testversion registrieren</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label>Name:<input class="form-control" type="text" id="home-test-name-input"></label>
+        <label>Email:<input class="form-control" type="email" id="home-test-email-input"></label>
+        <label>Organisation:<input class="form-control" type="text" id="home-test-orga-input"></label>
+        <hr>
+        <label>Nachricht:<textarea class="form-control" id="home-test-msg-input"></textarea></label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">abbrechen</button>
+        <button type="button" class="btn btn-primary" (click)="registerForTestversion()">Anfrage senden</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <app-navbar active="home"></app-navbar>
 <main class="page landing-page">
   <section class="clean-block clean-hero" style="background-image:url(&quot;/assets/img/tech/image4.jpg?h=0adc0de9a17a7caea6b8641f5d6ae02c&quot;);color:rgba(9, 162, 255, 0.85);">
     <div class="text">
       <h2>WR-Issue&nbsp;</h2>
-      <p>WR-Issue ist ein, von Webservice Rathje entwickeltes System, mit dem man Schäden in einem speziellen Bereich dem Zuständigen melden kann.&nbsp;&nbsp;</p><button class="btn btn-outline-light btn-lg" type="button">Beta testen</button>
+      <p>WR-Issue ist ein, von Webservice Rathje entwickeltes System, mit dem man Schäden in einem speziellen Bereich dem Zuständigen melden kann.&nbsp;&nbsp;</p>
+      <button class="btn btn-outline-light btn-lg" type="button" data-toggle="modal" data-target="#Home-Beta-Modal">Beta testen</button>
     </div>
   </section>
   <section class="clean-block clean-info dark">
@@ -18,7 +67,7 @@
           <h3>Kompatibilität</h3>
           <div class="getting-started-info">
             <p>Wir versuchen stetig unsere Handyapp für alle Geräte verfügbar zu machen. Außerdem wird das Administrationpanel dauerhaft für die neuen Features der bekanntesten Browser angepasst.</p>
-          </div><button class="btn btn-outline-primary btn-lg" type="button">Kostenlose Testversion</button>
+          </div><button class="btn btn-outline-primary btn-lg" type="button" data-toggle="modal" data-target="#Home-Testversion-Modal">Kostenlose Testversion</button>
         </div>
       </div>
     </div>

@@ -6,13 +6,17 @@
         <h2 class="text-info">Kontakt</h2>
         <p>Hier haben sie die Möglichkeit uns eine kleine Nachricht zukommen zu lassen.</p>
       </div>
-      <form>
-        <div class="form-group"><label>Name</label><input class="form-control" type="text"></div>
-        <div class="form-group"><label>Betreff</label><input class="form-control" type="text"></div>
-        <div class="form-group"><label>Email</label><input class="form-control" type="email"></div>
-        <div class="form-group"><label>Nachricht</label><textarea class="form-control"></textarea></div>
-        <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Senden</button></div>
-      </form>
+      <div class="" id="contact-alert"></div>
+      <div class="row">
+        <div class="col-md-4"></div>
+      <div style="width: 30em;" class="col-md-4">
+        <div class="form-group"><label>Name</label><input class="form-control" id="contact-name-input" type="text"></div>
+        <div class="form-group"><label>Betreff</label><input class="form-control" id="contact-subject-input" type="text"></div>
+        <div class="form-group"><label>Email</label><input class="form-control" type="email" id="contact-mail-input"></div>
+        <div class="form-group"><label>Nachricht</label><textarea class="form-control" id="contact-msg-input"></textarea></div>
+        <div class="form-group"><button class="btn btn-primary btn-block" (click)="sendMail()">Senden</button></div>
+      </div>
+      </div>
     </div>
   </section>
 </main>

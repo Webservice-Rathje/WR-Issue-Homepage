@@ -6,6 +6,15 @@
         <h2 class="text-info">Changelog</h2>
         <p>Hier sehen sie die neusten Änderungen an dem System, sodass sie immer über neue Features informiert sind.</p>
       </div>
+      <div class="card" style="margin-top: 1em;" *ngFor="let log of logs">
+        <div class="card-body">
+          <h4 class="card-title" style="font-weight: bold">{{log.Version}}</h4>
+          <h6 class="card-subtitle">Release date: {{parseDate(log["Release Date"])}}</h6>
+          <hr>
+          <h5 style="font-weight: bold">Changes:</h5>
+          <div *ngFor="let change of log.changes">- {{change}}</div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
